@@ -35,24 +35,30 @@ body {
     min-height: 100vh; 
   }
 
-.header {
-    font-family: "Montserrat Alternates", sans-serif;
-    top: 47px;
-}
-
 .main-content {
     background-color: #1a1d21; 
     padding: 20px;
     flex-grow: 1;
 }
 
-.header img {
+.header {
+    font-family: "Montserrat Alternates", sans-serif;
+    top: 47px;
+    position: relative;
+}
+
+#image-header {
     height: 100px;
     width: 100px;
     top: -55px;
-    color: #5a32a3;
+    transform: translateX(-180px);
 }
 
+#extract-image-header{
+    width: 130px;
+    margin-bottom: 100px;
+    
+}
 .header h1 {
     font-size: 57px;
 }
@@ -110,7 +116,6 @@ button a{
 
 i{
     cursor: pointer;
-    color: red;
 }
 
 .second-container {
@@ -178,9 +183,13 @@ i{
     color: green;
 }
 
-.trash-icon{
+.x-icon{
     font-size: 48px;
     color: red;
+}
+
+.total-div{
+    color: #AD8AFF;
 }
 
 .btn-close{

@@ -12,11 +12,32 @@ export function renderTable() {
       <td>${transaction.value}</td>
       <td class="d-none d-md-flex">
         <i class="bi bi-trash"
-        data-bs-toggle="modal"
-        data-bs-target="#removeModal" 
-        data-index="${index}"></i>
+          data-bs-toggle="modal"
+          data-bs-target="#removeModal" 
+          data-index="${index}"
+          data-item="${transaction.item}"
+          data-quantity="${transaction.quantity}"
+          data-value="${transaction.value}"></i>
       </td>
     `;
         tbody.appendChild(row);
     });
+    document.querySelectorAll('.bi-trash').forEach((trash) => {
+        trash.addEventListener('click', (event) => {
+            const target = event.target;
+            const index = Number(target.dataset.index);
+            const item = target.dataset.item;
+            const quantity = target.dataset.quantity;
+            const value = target.dataset.value;
+            const modalItem = document.getElementById('modalItem');
+            const modalQuantity = document.getElementById('modalQuantity');
+            const modalValue = document.getElementById('modalValue');
+            modalItem.textContent = item || '';
+            modalQuantity.textContent = quantity || '';
+            modalValue.textContent = value || '';
+            const modal = document.querySelector('#removeModal');
+            modal.dataset.index = index.toString();
+        });
+    });
 }
+renderTable();

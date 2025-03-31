@@ -17,3 +17,14 @@ export function getTransactions() {
     }
     return [];
 }
+export function deleteTransactions(index) {
+    const transactions = getTransactions();
+    if (index >= 0 && index < transactions.length) {
+        transactions.splice(index, 1);
+        console.log('Transações após exclusão:', transactions);
+        localStorage.setItem('transactions', JSON.stringify(transactions));
+    }
+    else {
+        console.error('Índice inválido para exclusão:', index);
+    }
+}

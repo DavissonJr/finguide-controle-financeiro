@@ -25,17 +25,20 @@
       <!-- nova-transacao-component (sidebar) -->
       <div id="first-container" class="sidebar col-xxl-3">
         <!-- header -->
-        <header class="header position-relative my-5 w-100 text-center">
+        <header class="header my-5 w-100 text-center position-relative">
           <img
             src="images/dollar-dollar-clay.png"
             alt="Icone de moeda"
-            class="position-absolute start-0 z-1"
+            class="position-absolute"
+            id="image-header"
           />
-          <h1
-            class="display-1 position-relative mb-4 d-inline-block z-2 m-0 fw-bold"
-          >
-            FIN <span>Guide</span>
-          </h1>
+          <div class="join-image-text mx-auto position-relative text-center">
+            <h1
+              class="display-1 position-relative mb-4 d-inline-block z-2 m-0 fw-bold"
+            >
+              FIN <span>Guide</span>
+            </h1>
+          </div>
         </header>
 
         <h2>Nova Transação</h2>
@@ -58,7 +61,7 @@
               class="form-control"
               id="item"
               placeholder="Mercadoria"
-              maxlength="50"
+              maxlength="35"
             />
           </div>
           <div class="row mb-3">
@@ -93,7 +96,7 @@
           <button
             id="add-btn"
             type="submit"
-            class="btn btn-custom fw-bold w-100"
+            class="btn btn-custom w-md-50 fw-bold w-100"
             data-bs-toggle="modal"
             data-bs-target="#confirmationModal"
             disabled
@@ -104,7 +107,7 @@
           <button
             id="showExtractBtn"
             type="button"
-            class="btn btn-custom w-100 fw-bold d-xxl-none"
+            class="btn btn-custom w-100 w-md-50 fw-bold d-xxl-none"
           >
             <a class="text-decoration-none fw-bold" href="#"
               >Visualizar Extrato</a
@@ -117,35 +120,37 @@
       <div id="second-container" class="main-content d-xxl-block mx-auto">
         <!-- header -->
 
-        <header class="header d-flex align-items-start my-4 mx-3">
-          <h1
-            class="fw-bold position-relative m-0 ms-2 d-xxl-none mx-auto text-center"
-          >
-            FIN <span>Guide</span>
-          </h1>
+        <header class="header w-100 text-start">
+          <img
+            src="images/Group 7.svg"
+            alt="Icone de moeda"
+            id="extract-image-header"
+          />
         </header>
 
         <div
           class="text-content d-flex justify-content-between text-center mx-auto mb-3 w-100"
         >
           <h1>Extrato</h1>
-          <h1 class="saldo">Saldo: <br /><span>R$ 4500,00</span></h1>
+          <h1 class="saldo">Saldo: <br /><span id="money">R$ 20,00</span></h1>
         </div>
 
         <!-- tabela -->
-        <div class="table-container w-100">
-          <table class="table w-100 mx-auto table-dark table-striped">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Mercadoria</th>
-                <th scope="col">Qtd</th>
-                <th scope="col">Valor</th>
-                <th scope="col" class="d-none d-md-flex">­</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+        <div class="border border-4 border-secondary mb-3">
+          <div class="table-container w-100 mt-3">
+            <table class="table w-100 table-dark table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Mercadoria</th>
+                  <th scope="col">Qtd</th>
+                  <th scope="col">Valor</th>
+                  <th scope="col" class="d-none d-md-flex">­</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
         </div>
         <div
           class="total-div d-flex justify-content-between align-items-center"
@@ -224,7 +229,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content mx-auto" style="background-color: #322c3a">
           <div class="modal-header border-0 d-flex flex-column">
-            <i class="trash-icon bi bi-x-circle"></i>
+            <i class="x-icon bi bi-x-circle"></i>
             <h5 class="modal-title fs-5" id="confirmationModalLabel">
               Confirma a exclusão do produto?
             </h5>
@@ -251,7 +256,7 @@
             <button
               type="button"
               class="btn btn-primary rounded-0 fw-light"
-              id="confirmAddBtn"
+              id="confirmRemoveBtn"
             >
               Excluir
             </button>
