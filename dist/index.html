@@ -96,26 +96,28 @@
             class="clear-link float-end text-decoration-none mb-2"
             >Limpar</a
           >
-          <button
-            id="add-btn"
-            type="submit"
-            class="btn btn-custom w-md-50 fw-bold w-100"
-            data-bs-toggle="modal"
-            data-bs-target="#confirmationModal"
-            disabled
-          >
-            Adicionar
-          </button>
-
-          <button
-            id="showExtractBtn"
-            type="button"
-            class="btn btn-custom w-100 w-md-50 fw-bold d-xxl-none"
-          >
-            <a class="text-decoration-none fw-bold" href="#"
-              >Visualizar Extrato</a
+          <div class="buttons w-md-50 mx-md-auto">
+            <button
+              id="add-btn"
+              type="submit"
+              class="btn btn-custom fw-bold w-100"
+              data-bs-toggle="modal"
+              data-bs-target="#confirmationModal"
+              disabled
             >
-          </button>
+              Adicionar
+            </button>
+
+            <button
+              id="showExtractBtn"
+              type="button"
+              class="btn btn-custom w-100 fw-bold d-xxl-none"
+            >
+              <a class="text-decoration-none fw-bold" href="#"
+                >Visualizar Extrato</a
+              >
+            </button>
+          </div>
         </form>
       </div>
 
@@ -134,7 +136,7 @@
         <div
           class="text-content d-flex justify-content-between text-center mx-auto mb-3 w-100"
         >
-          <h1>Extrato</h1>
+          <h1 class="fs-4">Extrato</h1>
           <h1 class="saldo">Saldo: <br /><span id="money">R$ 20,00</span></h1>
         </div>
 
@@ -244,9 +246,13 @@
             ></button>
           </div>
           <div class="modal-body mx-auto">
-            <p class="mb-1">Item: <span id="modalItem">Notebook</span></p>
-            <p class="mb-1">Quantidade: <span id="modalQuantity">2</span></p>
-            <p class="mb-3">Valor: <span id="modalValue">5.000,00</span></p>
+            <p class="mb-1">Item: <span id="removeModalItem">Notebook</span></p>
+            <p class="mb-1">
+              Quantidade: <span id="removeModalQuantity">2</span>
+            </p>
+            <p class="mb-3">
+              Valor: <span id="removeModalValue">5.000,00</span>
+            </p>
           </div>
           <div class="modal-footer border-0 d-flex justify-content-center g-3">
             <button

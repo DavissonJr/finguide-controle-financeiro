@@ -1,5 +1,6 @@
 import { updateBalance } from '../types/updateBalance.js';
 import { getTransactions } from './storage.js';
+import { updateConfirmationModal } from './update-modal.js';
 const tbody = document.querySelector('tbody');
 export function renderTable() {
     tbody.innerHTML = '';
@@ -23,6 +24,13 @@ export function renderTable() {
     `;
         tbody.appendChild(row);
     });
+    const addBtn = document.getElementById('add-btn');
+    addBtn.addEventListener('click', () => {
+        const item = document.getElementById('item').value;
+        const quantity = document.getElementById('quantity').value;
+        const value = document.getElementById('value').value;
+        updateConfirmationModal(item, quantity, value);
+    });
     document.querySelectorAll('.bi-trash').forEach((trash) => {
         trash.addEventListener('click', (event) => {
             const target = event.target;
@@ -30,12 +38,12 @@ export function renderTable() {
             const item = target.dataset.item;
             const quantity = target.dataset.quantity;
             const value = target.dataset.value;
-            const modalItem = document.getElementById('modalItem');
-            const modalQuantity = document.getElementById('modalQuantity');
-            const modalValue = document.getElementById('modalValue');
+            const modalItem = document.getElementById('removeModalItem');
+            const modalQuantity = document.getElementById('removeModalQuantity');
+            const modalValue = document.getElementById('removeModalValue');
             modalItem.textContent = item || '';
             modalQuantity.textContent = quantity || '';
-            modalValue.textContent = value || '';
+            modalValue.textContent = `R$${value},00` || '';
             const modal = document.querySelector('#removeModal');
             modal.dataset.index = index.toString();
         });

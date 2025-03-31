@@ -1,5 +1,6 @@
 import { updateBalance } from '../types/updateBalance.js';
 import { getTransactions } from './storage.js';
+import { updateConfirmationModal } from './update-modal.js';
 
 const tbody = document.querySelector('tbody') as HTMLTableSectionElement;
 
@@ -27,6 +28,16 @@ export function renderTable(): void {
     tbody.appendChild(row);
   });
 
+  const addBtn = document.getElementById('add-btn') as HTMLButtonElement;
+
+  addBtn.addEventListener('click', () => {
+  const item = (document.getElementById('item') as HTMLInputElement).value;
+  const quantity = (document.getElementById('quantity') as HTMLInputElement).value;
+  const value = (document.getElementById('value') as HTMLInputElement).value;
+
+  updateConfirmationModal(item, quantity, value);
+});
+
   document.querySelectorAll('.bi-trash').forEach((trash) => { 
     trash.addEventListener('click', (event) => {
       const target = event.target as HTMLElement;
@@ -35,12 +46,12 @@ export function renderTable(): void {
       const quantity = target.dataset.quantity;
       const value = target.dataset.value;
 
-      const modalItem = document.getElementById('modalItem') as HTMLSpanElement;
-      const modalQuantity = document.getElementById('modalQuantity') as HTMLSpanElement;
-      const modalValue = document.getElementById('modalValue') as HTMLSpanElement;
+      const modalItem = document.getElementById('removeModalItem') as HTMLSpanElement;
+      const modalQuantity = document.getElementById('removeModalQuantity') as HTMLSpanElement;
+      const modalValue = document.getElementById('removeModalValue') as HTMLSpanElement;
       modalItem.textContent = item || '';
       modalQuantity.textContent = quantity || '';
-      modalValue.textContent = value || '';
+      modalValue.textContent = `R$${value},00` || '';
 
       const modal = document.querySelector('#removeModal') as HTMLElement;
       modal.dataset.index = index.toString();

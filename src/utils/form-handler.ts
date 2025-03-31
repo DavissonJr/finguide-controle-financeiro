@@ -21,7 +21,6 @@ export function addTransaction() {
   renderTable();
 }
 
-
 confirmAddBtn.addEventListener('click', addTransaction);
 
 export function removeTransaction(index){
