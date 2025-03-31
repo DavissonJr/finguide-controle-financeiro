@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Murecho:wght@100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    font-family: "Murecho", sans-serif;
+}
+
+/* nova-transacao-component */
+
+.container {
+    max-width: 400px;
+    height: 100dvh;
+}
+
+#first-container{
+    display: block;
+}
+
+#second-container {
+    display: none;
+}
+
+.sidebar { 
+    background-color: #1a1a2e;
+    padding: 20px;
+    min-height: 100vh; 
+  }
+
+.header {
+    font-family: "Montserrat Alternates", sans-serif;
+    top: 47px;
+}
+
+.main-content {
+    background-color: #1a1d21; 
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.header img {
+    height: 100px;
+    width: 100px;
+    top: -55px;
+    color: #5a32a3;
+}
+
+.header h1 {
+    font-size: 57px;
+}
+
+.header span {
+    font-size: 43px;
+    color: #47E1B6;
+}
+
+form select option{
+    color: #8C8C8C;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.form-control, .form-select {
+    background-color: #2a2a3e;
+    border: none;
+    color: #ffffff;
+}
+
+.form-control::placeholder {
+    color: #888;
+}
+
+.btn-custom {
+    background-color: #AD8AFF;
+    color: #240E2E;
+    border: none;
+    margin-bottom: 10px;
+}
+
+button a{
+    color: #240E2E;
+}
+
+.btn-custom:hover {
+    background-color: #5a32a3;
+}
+
+.clear-link {
+    color: #C1C0C1;
+    font-size: 14px;
+}
+
+.form-label{
+    color: #C1C0C1;
+}
+
+
+/* extrato-component */
+
+i{
+    cursor: pointer;
+    color: red;
+}
+
+.second-container {
+    max-width: 400px;
+    height: 100dvh;
+}
+
+.second-container .header {
+    font-family: "Montserrat Alternates", sans-serif;
+    top: 47px;
+    width: 100%;
+}
+
+#sum-text, #price-text{
+    font-size: 1rem;
+}
+
+.second-container .header img {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    margin-top: -20px;
+    left: 20px;
+    color: #5a32a3;
+}
+
+.second-container .header h1 {
+    position: relative;
+    right: 25px;
+    font-size: 26px;
+}
+
+.second-container .header span {
+    font-size: 19px;
+    color: #47E1B6;
+}
+ 
+.text-content h1 {
+    font-size: 16px;
+}
+
+.saldo{
+    color: #AD8AFF;
+}
+
+/* tabela scroll */
+
+.table-container{
+    overflow-x: auto;
+    max-height: 380px;
+}
+
+/* modal */
+
+#confirmationModal .modal-content {
+    color: #f8f9fa;
+    width: 85%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.check-icon {
+    font-size: 48px;
+    color: green;
+}
+
+.trash-icon{
+    font-size: 48px;
+    color: red;
+}
+
+.btn-close{
+    color: #f8f9fa;
+    top: 0;
+    right: 0;
+}
+  
+#confirmationModal .modal-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+  
+#confirmationModal .modal-body {
+    padding: 0 1.5rem;
+}
+  
+#confirmationModal .modal-footer {
+    padding: 1rem 1.5rem;
+}
+  
+#confirmationModal .modal-footer .btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+  
+#confirmationModal .modal-footer .btn-secondary {
+    background-color: transparent;
+    color: #AD8AFF;
+    border: 1px solid #dee2e6;
+}
+  
+#confirmationModal .modal-footer .btn-primary {
+    background-color: #AD8AFF;
+    color: #322C3A;
+     border: none;
+}
+
+/* remove modal */
+
+#removeModal .modal-content {
+    color: #f8f9fa;
+    width: 85%;
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#removeModal .modal-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+  
+#removeModal .modal-body {
+    padding: 0 1.5rem;
+}
+  
+#removeModal .modal-footer {
+    padding: 1rem 1.5rem;
+}
+  
+#removeModal .modal-footer .btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: bold;
+}
+  
+#removeModal .modal-footer .btn-secondary {
+    background-color: transparent;
+    color: #AD8AFF;
+    border: 1px solid #dee2e6;
+}
+  
+#removeModal .modal-footer .btn-primary {
+    background-color: #AD8AFF;
+    color: #322C3A;
+     border: none;
+}
+
