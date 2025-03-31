@@ -188,6 +188,12 @@ i{
     color: red;
 }
 
+.input-group-text{
+    background-color: #2a2a3e;
+    border: none;
+    color: #dee2e6;
+}
+
 .total-div{
     color: #AD8AFF;
 }

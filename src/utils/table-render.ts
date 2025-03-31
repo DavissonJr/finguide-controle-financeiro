@@ -1,3 +1,4 @@
+import { updateBalance } from '../types/updateBalance.js';
 import { getTransactions } from './storage.js';
 
 const tbody = document.querySelector('tbody') as HTMLTableSectionElement;
@@ -12,7 +13,7 @@ export function renderTable(): void {
       <th scope="row">${transaction.type === 'Compra' ? '-' : '+'}</th>
       <td>${transaction.item}</td>
       <td>${transaction.quantity}</td>
-      <td>${transaction.value}</td>
+      <td>R$${transaction.value},00</td>
       <td class="d-none d-md-flex">
         <i class="bi bi-trash"
           data-bs-toggle="modal"
@@ -45,5 +46,8 @@ export function renderTable(): void {
       modal.dataset.index = index.toString();
     });
   });
+
+  updateBalance(); 
 }
+
 renderTable();

@@ -78,13 +78,16 @@
             </div>
             <div class="col">
               <label for="value" class="form-label">Valor</label>
-              <input
-                type="text"
-                class="form-control"
-                id="value"
-                placeholder="R$ 0,00"
-                value="R$ 0,00"
-              />
+              <div class="input-group mb-3">
+                <span class="input-group-text">R$</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="value"
+                  aria-label="Amount (to the nearest real)"
+                />
+                <span class="input-group-text">.00</span>
+              </div>
             </div>
           </div>
           <a
