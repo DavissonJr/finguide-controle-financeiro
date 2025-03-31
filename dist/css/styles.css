@@ -45,13 +45,15 @@ body {
     font-family: "Montserrat Alternates", sans-serif;
     top: 47px;
     position: relative;
+    margin-bottom: 80px;
+}
+
+.second-header{
+    margin-bottom: -0px;
 }
 
 #image-header {
-    height: 100px;
-    width: 100px;
-    top: -55px;
-    transform: translateX(-180px);
+    width: 200px;
 }
 
 #extract-image-header{
@@ -279,4 +281,3 @@ i{
       width: 50%;
     }
 }
-
