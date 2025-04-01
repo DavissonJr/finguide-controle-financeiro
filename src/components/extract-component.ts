@@ -1,5 +1,5 @@
 import { showExtract } from "../types/changeDisplay.js";
-import { updateSaldo } from "../types/saldo.js";
+import { updateSaldo } from "../types/balance.js";
 
 const vizualizarExtratoBtn = document.getElementById("showExtractBtn") as HTMLButtonElement | null;
 const transactionContainer = document.getElementById("first-container") as HTMLElement | null;
@@ -10,5 +10,3 @@ if (vizualizarExtratoBtn && transactionContainer && extractContainer) {
       showExtract(event, transactionContainer, extractContainer)
     );
 }
-
-updateSaldo();

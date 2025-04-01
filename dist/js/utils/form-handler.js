@@ -2,6 +2,7 @@ import { saveTransaction } from './storage.js';
 import { renderTable } from './table-render.js';
 import { deleteTransactions } from './storage.js';
 import { closeAddModal, closeRemoveModal } from './opne-close-modal.js';
+import { updateSaldo } from '../types/balance.js';
 const transactionType = document.getElementById('transactionType');
 const item = document.getElementById('item');
 const quantity = document.getElementById('quantity');
@@ -16,6 +17,7 @@ export function addTransaction() {
         value: value.value,
     };
     saveTransaction(transaction);
+    updateSaldo();
     closeAddModal();
     renderTable();
 }
@@ -32,5 +34,6 @@ removeTransactionBtn.addEventListener('click', () => {
     const modal = document.querySelector('#removeModal');
     const index = Number(modal.dataset.index);
     removeTransaction(index);
+    updateSaldo();
 });
 renderTable();

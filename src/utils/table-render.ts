@@ -1,4 +1,4 @@
-import { updateBalance } from '../types/updateBalance.js';
+import { updateBalance } from '../types/updateTotalPrice.js';
 import { getTransactions } from './storage.js';
 import { updateConfirmationModal } from './update-modal.js';
 
