@@ -1,6 +1,7 @@
 import { saveTransaction } from './storage.js';
 import { renderTable } from './table-render.js';
 import { deleteTransactions } from './storage.js';
+import { closeAddModal, closeRemoveModal } from './opne-close-modal.js';
 
 const transactionType = document.getElementById('transactionType') as HTMLSelectElement;
 const item = document.getElementById('item') as HTMLInputElement;
@@ -18,6 +19,7 @@ export function addTransaction() {
   };
 
   saveTransaction(transaction);
+  closeAddModal();
   renderTable();
 }
 
@@ -25,6 +27,7 @@ confirmAddBtn.addEventListener('click', addTransaction);
 
 export function removeTransaction(index){
   deleteTransactions(index);
+  closeRemoveModal();
   renderTable();
 }
 
