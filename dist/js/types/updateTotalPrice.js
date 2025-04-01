@@ -4,14 +4,21 @@ export function updateBalance() {
     const transactions = getTransactions();
     let balance = 0;
     transactions.forEach((transaction) => {
-        const transactionValue = typeof transaction.value === 'string'
-            ? Number(transaction.value.replace(/[^\d,-]/g, '').replace(',', '.'))
-            : Number(transaction.value);
-        if (transaction.type === 'Venda') {
-            balance += transactionValue;
+        let transactionValue;
+        if (typeof transaction.value === 'string') {
+            const cleanedValue = transaction.value.replace(/[^\d,.-]/g, '').replace(',', '.');
+            transactionValue = parseFloat(cleanedValue);
         }
-        else if (transaction.type === 'Compra') {
-            balance -= transactionValue;
+        else {
+            transactionValue = parseFloat(transaction.value);
+        }
+        if (!isNaN(transactionValue)) {
+            if (transaction.type === 'Venda') {
+                balance += transactionValue;
+            }
+            else if (transaction.type === 'Compra') {
+                balance -= transactionValue;
+            }
         }
     });
     const formattedBalance = `R$ ${balance.toFixed(2).replace('.', ',')}`;

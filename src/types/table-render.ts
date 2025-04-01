@@ -14,7 +14,7 @@ export function renderTable(): void {
       <th scope="row">${transaction.type === 'Compra' ? '-' : '+'}</th>
       <td>${transaction.item}</td>
       <td>${transaction.quantity}</td>
-      <td>R$${transaction.value},00</td>
+      <td>R$${transaction.value}</td>
       <td class="d-none d-md-flex">
         <i class="bi bi-trash"
           data-bs-toggle="modal"

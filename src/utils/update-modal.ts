@@ -5,5 +5,5 @@ export function updateConfirmationModal(item: string, quantity: string, value: s
   
     modalItem.textContent = item;
     modalQuantity.textContent = quantity;
-    modalValue.textContent = `R$ ${value},00`;
+    modalValue.textContent = `R$ ${value}`;
   }

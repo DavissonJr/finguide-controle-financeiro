@@ -4,5 +4,5 @@ export function updateConfirmationModal(item, quantity, value) {
     const modalValue = document.getElementById('modalValue');
     modalItem.textContent = item;
     modalQuantity.textContent = quantity;
-    modalValue.textContent = `R$ ${value},00`;
+    modalValue.textContent = `R$ ${value}`;
 }

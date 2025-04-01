@@ -7,14 +7,21 @@ export function updateBalance(): void {
     let balance = 0;
 
     transactions.forEach((transaction: any) => {
-        const transactionValue = typeof transaction.value === 'string'
-            ? Number(transaction.value.replace(/[^\d,-]/g, '').replace(',', '.'))
-            : Number(transaction.value);
+        let transactionValue: number;
 
-        if (transaction.type === 'Venda') {
-            balance += transactionValue;
-        } else if (transaction.type === 'Compra') {
-            balance -= transactionValue;
+        if (typeof transaction.value === 'string') {
+            const cleanedValue = transaction.value.replace(/[^\d,.-]/g, '').replace(',', '.');
+            transactionValue = parseFloat(cleanedValue);
+        } else {
+            transactionValue = parseFloat(transaction.value);
+        }
+
+        if (!isNaN(transactionValue)) {
+            if (transaction.type === 'Venda') {
+                balance += transactionValue;
+            } else if (transaction.type === 'Compra') {
+                balance -= transactionValue;
+            }
         }
     });
 
