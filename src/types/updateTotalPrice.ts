@@ -1,4 +1,4 @@
-import { getTransactions } from "../utils/storage.js";
+import { getTransactions } from "./storage.js";
 
 const priceText = document.getElementById('price-text') as HTMLElement;
 

@@ -166,8 +166,38 @@ i{
 /* tabela scroll */
 
 .table-container{
+    background-color: #322C3A;
+    border-radius: 10px;
     overflow-x: auto;
     max-height: 380px;
+}
+
+.tabela table {
+    width: 97%;
+    padding: 20px;
+}
+
+.tabela thead {
+    background-color: #201924;
+    color: white;
+}
+
+.tabela tbody tr {
+    background-color: #322C3A;
+}
+
+.tabela tbody tr:nth-child(odd) {
+    background-color: #201924;
+}
+
+.tabela td {
+    color: #B3B3B3;
+    padding: 0.5rem;
+}
+
+.tabela th {
+    color: #B3B3B3;
+    padding: 0.5rem;
 }
 
 /* modal */

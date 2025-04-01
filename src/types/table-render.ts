@@ -1,6 +1,6 @@
-import { updateBalance } from '../types/updateTotalPrice.js';
+import { updateBalance } from './updateTotalPrice.js';
 import { getTransactions } from './storage.js';
-import { updateConfirmationModal } from './update-modal.js';
+import { updateConfirmationModal } from '../utils/update-modal.js';
 
 const tbody = document.querySelector('tbody') as HTMLTableSectionElement;
 

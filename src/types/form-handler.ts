@@ -1,8 +1,8 @@
 import { saveTransaction } from './storage.js';
 import { renderTable } from './table-render.js';
 import { deleteTransactions } from './storage.js';
-import { closeAddModal, closeRemoveModal } from './opne-close-modal.js';
-import { updateSaldo } from '../types/balance.js';
+import { closeAddModal, closeRemoveModal } from '../utils/opne-close-modal.js';
+import { updateSaldo } from './balance.js';
 
 const transactionType = document.getElementById('transactionType') as HTMLSelectElement;
 const item = document.getElementById('item') as HTMLInputElement;

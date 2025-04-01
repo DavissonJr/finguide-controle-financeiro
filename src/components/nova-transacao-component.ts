@@ -1,7 +1,7 @@
 import { showExtract, showNewTransaction } from "../types/changeDisplay.js";
 import { cleanButtons } from "../types/cleanInputs.js";
 import { checkFormValidity } from "../types/enableAddBtn.js";
-import { addTransaction } from "../utils/form-handler.js";
+import { addTransaction } from "../types/form-handler.js";
 
 document.addEventListener("DOMContentLoaded", () => {
  

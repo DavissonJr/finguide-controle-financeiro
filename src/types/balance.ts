@@ -1,4 +1,4 @@
-import { getTransactions } from "../utils/storage.js";
+import { getTransactions } from "./storage.js";
 
 export function updateSaldo(): void {
     const transactions = getTransactions();
