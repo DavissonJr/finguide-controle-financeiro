@@ -2,7 +2,7 @@ import { saveTransaction } from './storage.js';
 import { renderTable } from './table-render.js';
 import { deleteTransactions } from './storage.js';
 import { closeAddModal, closeRemoveModal } from '../utils/opne-close-modal.js';
-import { updateSaldo } from './balance.js';
+import { updateSaldo } from '../components/balance.js';
 import { disableButton } from './disableAddBtn.js';
 import { cleanButtons } from './cleanInputs.js';
 const transactionType = document.getElementById('transactionType');
