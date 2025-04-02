@@ -1,5 +1,3 @@
-declare var bootstrap: any;
-
 export function closeAddModal() {
   const closeButton = document.querySelector('#confirmationModal .btn-close') as HTMLElement;
   closeButton.click(); 
