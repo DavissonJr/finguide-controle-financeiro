@@ -204,7 +204,7 @@ i{
 
 #confirmationModal .modal-content {
     color: #f8f9fa;
-    width: 75%;
+    width: 80%;
     border-radius: 15px;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -270,7 +270,7 @@ i{
 
 #removeModal .modal-content {
     color: #f8f9fa;
-    width: 75%;
+    width: 80%;
     border-radius: 15px;
     border: none;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
