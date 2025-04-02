@@ -1,4 +1,6 @@
+import { cleanCurrency } from "../utils/currencyUtils.js";
 import { getTransactions } from "./storage.js";
+
 
 export function updateSaldo(): void {
     const transactions = getTransactions();
@@ -8,8 +10,7 @@ export function updateSaldo(): void {
         let transactionValue: number;
 
         if (typeof transaction.value === 'string') {
-            const cleanedValue = transaction.value.replace(/[^\d,.-]/g, '').replace(',', '.');
-            transactionValue = parseFloat(cleanedValue);
+            transactionValue = cleanCurrency(transaction.value);
         } else {
             transactionValue = parseFloat(transaction.value);
         }

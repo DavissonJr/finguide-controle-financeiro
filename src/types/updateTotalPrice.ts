@@ -1,4 +1,6 @@
+import { cleanCurrency } from "../utils/currencyUtils.js";
 import { getTransactions } from "./storage.js";
+
 
 const priceText = document.getElementById('price-text') as HTMLElement;
 
@@ -10,8 +12,7 @@ export function updateBalance(): void {
         let transactionValue: number;
 
         if (typeof transaction.value === 'string') {
-            const cleanedValue = transaction.value.replace(/[^\d,.-]/g, '').replace(',', '.');
-            transactionValue = parseFloat(cleanedValue);
+            transactionValue = cleanCurrency(transaction.value);
         } else {
             transactionValue = parseFloat(transaction.value);
         }
