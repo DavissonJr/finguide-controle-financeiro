@@ -51,7 +51,7 @@ export function renderTable(): void {
       const modalValue = document.getElementById('removeModalValue') as HTMLSpanElement;
       modalItem.textContent = item || '';
       modalQuantity.textContent = quantity || '';
-      modalValue.textContent = `R$${value},00` || '';
+      modalValue.textContent = `R$${value}` || '';
 
       const modal = document.querySelector('#removeModal') as HTMLElement;
       modal.dataset.index = index.toString();
