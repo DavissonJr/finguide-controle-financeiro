@@ -27,9 +27,6 @@ export function removeTransaction(index) {
     closeRemoveModal();
     renderTable();
 }
-export function consoleTeste() {
-    console.log("Testando papai");
-}
 removeTransactionBtn.addEventListener('click', () => {
     const modal = document.querySelector('#removeModal');
     const index = Number(modal.dataset.index);

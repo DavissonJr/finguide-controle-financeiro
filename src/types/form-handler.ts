@@ -33,10 +33,6 @@ export function removeTransaction(index){
   renderTable();
 }
 
-export function consoleTeste(){
-  console.log("Testando papai")
-}
-
 removeTransactionBtn.addEventListener('click', () => {
   const modal = document.querySelector('#removeModal') as HTMLElement;
   const index = Number(modal.dataset.index);
