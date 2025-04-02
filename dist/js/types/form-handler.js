@@ -3,6 +3,7 @@ import { renderTable } from './table-render.js';
 import { deleteTransactions } from './storage.js';
 import { closeAddModal, closeRemoveModal } from '../utils/opne-close-modal.js';
 import { updateSaldo } from './balance.js';
+import { disableButton } from './disableAddBtn.js';
 const transactionType = document.getElementById('transactionType');
 const item = document.getElementById('item');
 const quantity = document.getElementById('quantity');
@@ -19,6 +20,7 @@ export function addTransaction() {
     saveTransaction(transaction);
     updateSaldo();
     closeAddModal();
+    disableButton();
     renderTable();
 }
 confirmAddBtn.addEventListener('click', addTransaction);
