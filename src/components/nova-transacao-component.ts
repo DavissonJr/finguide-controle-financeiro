@@ -2,6 +2,7 @@ import { showExtract, showNewTransaction } from "../types/changeDisplay.js";
 import { cleanButtons } from "../types/cleanInputs.js";
 import { checkFormValidity } from "../types/enableAddBtn.js";
 import { addTransaction } from "../types/form-handler.js";
+import { attachCurrencyFormatter, formatCurrency } from "../types/MaskValue.js";
 
 document.addEventListener("DOMContentLoaded", () => {
  
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   checkFormValidity();
+  attachCurrencyFormatter("value");
 
   addTransaction();
 

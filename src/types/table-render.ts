@@ -14,7 +14,7 @@ export function renderTable(): void {
       <th scope="row">${transaction.type === 'Compra' ? '-' : '+'}</th>
       <td>${transaction.item}</td>
       <td>${transaction.quantity}</td>
-      <td>R$${transaction.value}</td>
+      <td>${transaction.value}</td>
       <td class="d-none d-md-flex">
         <i class="bi bi-trash"
           data-bs-toggle="modal"
@@ -51,7 +51,7 @@ export function renderTable(): void {
       const modalValue = document.getElementById('removeModalValue') as HTMLSpanElement;
       modalItem.textContent = item || '';
       modalQuantity.textContent = quantity || '';
-      modalValue.textContent = `R$${value}` || '';
+      modalValue.textContent = `${value}` || '';
 
       const modal = document.querySelector('#removeModal') as HTMLElement;
       modal.dataset.index = index.toString();
